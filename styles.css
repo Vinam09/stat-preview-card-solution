@@ -1,0 +1,156 @@
+:root {
+  --backblue: hsl(233, 47%, 7%);
+  --cardblue: hsl(244, 38%, 16%);
+  --violetaccent: hsl(277, 64%, 61%);
+  --headingwhite: hsl(0, 0%, 100%);
+  --paragraphwhite: hsla(0, 0%, 100%, 0.75);
+  --statheadings: hsla(0, 0%, 100%, 0.6);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  background-color: var(--backblue);
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  color: var(--headingwhite);
+}
+
+span {
+  color: var(--violetaccent);
+}
+
+.card-flex-container {
+  width: auto;
+  height: auto;
+  background-color: var(--violetaccent);
+  margin: 9vw 9vw;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  content: url("images/image-header-desktop.jpg");
+  width: 100%;
+  height: 100%;
+  opacity: 60%;
+  flex: 50%;
+  overflow: visible;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2vw;
+  background-color: var(--cardblue);
+  flex: 50%;
+}
+
+.text-description {
+  padding: 2vw 4vw;
+}
+
+.bold-title {
+  font-size: 2.5em;
+  font-family: 'Inter', sans-serif;
+  margin-top: 3vw;
+  margin-bottom: 2vw;
+}
+
+.description-title {
+  margin-right: 6vw;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--paragraphwhite);
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2vw 8vw 1vw 4vw;
+}
+
+.stat-heading {
+  color: var(--statheadings);
+}
+
+.stat-num {
+  font-size: 1.5em;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--headingwhite);
+  margin-bottom: 10px
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* smaller screens */
+@media screen and (max-width: 500px) {
+  body {
+    text-align: center;
+  }
+
+  .text-container {
+    text-align: center;
+    padding: 0;
+  }
+
+  .image-container {
+    content: url("images/image-header-mobile.jpg");
+  }
+
+  .bold-title {
+    font-size: 2em;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 5vw;
+
+  }
+
+  .description-title {
+    font-size: 13px;
+    margin: 0 6vw 7vw 6vw;
+  }
+
+  .stats {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .stats>div {
+    margin-bottom: 7vw;
+  }
+
+  .stat-num {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5em;
+  }
+
+  .stat-heading{
+    font-size: 13px;
+  }
+}
